@@ -1,11 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">{{process.env.testKey}}</router-link> |
+      <router-link to="/">{{homeTitle}}</router-link> |
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      homeTitle: process.env.VUE_APP_testKey,
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
